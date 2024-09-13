@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorvemix Refrescando o Verão</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slide.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img/header/LogoSorvemix.png" alt="logo">
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Produtos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Onde Estamos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="login-button">
+                <button><a href="# ">SEJA UM REVENDEDOR</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/header/menu_white_36dp.svg"></button>
+            </div>           
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre Nós</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Produtos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Onde Estamos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="# ">SEJA UM REVENDEDOR</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="slider">
+            <div class="slider-content">
+                
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+    
+                <div class="slide-box primeiro">
+                    <img class="img-desktop" src="img/slide/slide-01.png" alt="slide 1">
+                    <img class="img-mobile" src="img/slide/slide-1-mob.png" alt="slide 1">
+                </div>
+    
+                <div class="slide-box">
+                    <img class="img-desktop" src="img/slide/slide-02.png" alt="slide 3">
+                    <img class="img-mobile" src="img/slide/slide-2-mob.png" alt="slide 1">
+                </div>
+    
+                <div class="slide-box">
+                    <img class="img-desktop" src="img/slide/slide-03.png" alt="slide 3">
+                    <img class="img-mobile" src="img/slide/slide-3-mob.png" alt="slide 3">
+                </div>
+    
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+    
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+    
+            </div>
+        </section>
+        
+        <section class="slider-2">
+            <div class="text-slider-2">
+                <p>CONHEÇA NOSSOS SABORES</p>
+            </div>
+            <div class="slider-wrapper">
+                <div class="slider-embalagem">
+                    <img src="img/embalagem/chocolate.png" alt="chocolate" class="embalagem">
+                    <img src="img/embalagem/morango.png" alt="morango" class="embalagem">
+                    <img src="img/embalagem/amendoim.png" alt="amendoim" class="embalagem">
+                    <img src="img/embalagem/coco.png" alt="coco" class="embalagem">
+                    <img src="img/embalagem/abacaxi-ao-vinho.png" alt="abacaxi-ao-vinho" class="embalagem">
+                    <img src="img/embalagem/beijinho.png" alt="beijinho" class="embalagem">
+                    <img src="img/embalagem/limao.png" alt="limao" class="embalagem">
+                    <img src="img/embalagem/maracuja.png" alt="maracuja" class="embalagem">
+                </div>
+            </div>
+            <div>
+                <a href="#">VER TODOS SABORES</a>
+            </div>
+        </section>
+        
+        
+
+
+
+
+
+
+
+
+
+        <!--
+        <section class="banner">
+
+            <div class="teste">
+                <img src="img/Banner-01.svg" >
+            </div>
+            <div>
+               <img src="img/Banner01_2000px.svg" class="teste">
+            </div> 
+        </section>
+        -->
+        
+
+    </main>
+    <!--
+    <footer>
+        <p>&copy; 2024 Sorvemix - Refrescando o Verão</p>    
+    </footer>
+    -->
+    <script src="js/main.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+
+<script>
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    })
+
+    //get scroll value
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+       requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+</script>
+</body>
+</html>
