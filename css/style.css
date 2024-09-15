@@ -8,7 +8,7 @@
 }
 
 header{
-    background-color:  #4db100;
+    background-color: #6ddf16;
 }
 
 main {
@@ -293,10 +293,6 @@ main {
 
 /*Celular*/
 @media screen and (max-width: 1124px){
-
-    header {
-        background-color: #6ddf16;
-    }
 
     .logo img{
         height: 100px;
