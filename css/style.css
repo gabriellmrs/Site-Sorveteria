@@ -4,7 +4,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Lemon', sans-serif;
+    font-family: 'Lemon', 'Comic Sans MS', cursive, sans-serif;
 }
 
 header{
@@ -12,7 +12,7 @@ header{
 }
 
 main {
-    background-color:#f1f8a7;
+    background-color:#fff;
 }
 
 .nav-bar{
@@ -136,12 +136,16 @@ main {
 }
 
 .text-slider-2 {
+    width: 700px;
     margin-bottom: 20px;
+    background-color: #f3eb24;
+    border-radius: 40px;
 }
 
 .text-slider-2 p {
-    font-family: cursive;
-    font-size: 30px;
+    font-family: 'Lemon', 'Comic Sans MS', cursive, sans-serif;
+    font-size: 40px;
+    color: #FF0000;
 }
 
 .slider-wrapper {
@@ -185,6 +189,7 @@ main {
     display: inline-block; /* Garantir que o link se comporte como um botão */
     cursor: pointer;
     margin-top: 46px;
+    margin-bottom: 20px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
@@ -197,6 +202,37 @@ main {
 /* Adicional: Remover o sublinhado dos links dentro da seção slider-2 */
 .slider-2 a {
     text-decoration: none;
+}
+
+.slider-3 {
+    margin-top: 70px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    background-image: url('img/fundo.png');
+}
+
+.img-slider-3 {
+    border-radius: 30px;
+}
+
+.img-slider-3 img {
+    width: 500px;
+    height: 500px;
+    border-radius: 60px;
+}
+
+.text-slider-3 h1{
+    margin-top: 5%;
+    margin-left: 3%;
+    font-size: 40px;
+}
+
+.text-slider-3 p{
+    margin-top: 5%;
+    margin-left: 3%;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
